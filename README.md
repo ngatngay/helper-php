@@ -3,5 +3,5 @@
 ## Instal
 
 ```
-composer require ngatngay/helper-php:dev-master
+composer require ngatngay/helper-php:dev-main
 ```
