@@ -1,7 +1,8 @@
 {
     "name": "ngatngay/helper-php",
     "description": "Simple Helper for PHP",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
+    "license": "MIT",
     "authors": [
         {
             "name": "NgatNgay",
