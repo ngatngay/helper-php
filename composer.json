@@ -1,0 +1,19 @@
+{
+    "name": "ngatngay/helper-php",
+    "description": "Simple Helper for PHP",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "NgatNgay",
+            "email": "pmt.coder@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    }
+}
