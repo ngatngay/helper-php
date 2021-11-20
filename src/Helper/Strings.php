@@ -20,4 +20,14 @@ class Strings
 
         return $output;
     }
+
+    public static function nl2br(string $str): string
+    {
+        return str_replace("\n", '<br />', $str);
+    }
+
+    public static function br2nl(string $str): string
+    {
+        return preg_replace('#<br\s*/?>#i', "\n", $str);
+    }
 }
