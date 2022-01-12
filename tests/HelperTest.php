@@ -18,4 +18,6 @@ test('string test', function () {
     /** @var TestCase $this */
     $this->assertSame('Đụ má mày...', Strings::wordCut('Đụ má mày chửi thề con cặc', 3));
     $this->assertSame('Đụ má mày', Strings::wordCut('Đụ má mày', 3));
+    $this->assertSame('Xin chao', Strings::vn2en('Xin chào'));
+    $this->assertSame('Chenh lEch Ap suat', Strings::vn2en('Chênh lỆch Áp suất'));
 });
