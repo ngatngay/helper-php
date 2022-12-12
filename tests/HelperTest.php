@@ -2,6 +2,7 @@
 
 use NgatNgay\Helper\Arrays;
 use NgatNgay\Helper\Strings;
+use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
 test('array test', function () {
@@ -20,4 +21,7 @@ test('string test', function () {
     $this->assertSame('Đụ má mày', Strings::wordCut('Đụ má mày', 3));
     $this->assertSame('Xin chao', Strings::vn2en('Xin chào'));
     $this->assertSame('Chenh lEch Ap suat', Strings::vn2en('Chênh lỆch Áp suất'));
+
+    Assert::assertEquals(true, Strings::empty(''));
+    Assert::assertEquals(false, Strings::empty('1'));
 });
