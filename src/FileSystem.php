@@ -2,13 +2,13 @@
 
 namespace NgatNgay\Helper;
 
-class File
+class FileSystem
 {
     /**
      * @param $fileSize string
      * @return string
      */
-    public static function readableSize($fileSize)
+    public function readableSize($fileSize)
     {
         $size = floatval($fileSize);
 
@@ -33,5 +33,25 @@ class File
         }
 
         return $s;
+    }
+
+    public function remove($path)
+    {
+        if (file_exists($path)) {
+            unlink($path);
+        }
+    }
+
+    public function removeDir($dir, $remove_this = true)
+    {
+        if ($objs = glob($dir . "/*")) {
+            foreach ($objs as $obj) {
+                is_dir($obj) ? $this->removeDir($obj) : $this->remove($obj);
+            }
+        }
+
+        if ($remove_this) {
+            rmdir($dir);
+        }
     }
 }

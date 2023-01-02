@@ -13,9 +13,9 @@
         "php": ">=7.4"
     },
     "autoload": {
-        "classmap": [
-            "src/"
-        ]
+        "psr-4": {
+            "NgatNgay\\Helper\\": "src/"
+        }
     },
     "require-dev": {
         "pestphp/pest": "^1.21"
