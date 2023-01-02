@@ -5,7 +5,7 @@ use NgatNgay\Helper\Strings;
 use PHPUnit\Framework\Assert;
 use PHPUnit\Framework\TestCase;
 
-test('array test', function () {
+test('arrays test', function () {
     $arr = [];
     for ($i = 0; $i < 95; $i++) {
         $arr[] = $i;
@@ -15,7 +15,7 @@ test('array test', function () {
     $this->assertEquals([90, 91, 92, 93, 94], Arrays::getFromPage($arr, 10));
 });
 
-test('string test', function () {
+test('strings test', function () {
     /** @var TestCase $this */
     $this->assertSame('Đụ má mày...', Strings::wordCut('Đụ má mày chửi thề con cặc', 3));
     $this->assertSame('Đụ má mày', Strings::wordCut('Đụ má mày', 3));
@@ -24,4 +24,9 @@ test('string test', function () {
 
     Assert::assertEquals(true, Strings::empty(''));
     Assert::assertEquals(false, Strings::empty('1'));
+});
+
+test('file test', function () {
+    $this->assertSame('213 B', \NgatNgay\Helper\File::readableSize(213));
+    $this->assertSame('1 KB', \NgatNgay\Helper\File::readableSize(1024));
 });
