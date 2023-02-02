@@ -4,6 +4,19 @@ namespace NgatNgay\Helper;
 
 class FileSystem
 {
+    function getExtension(string $name): string
+    {
+        $name = strval($name);
+
+        preg_match('/\.([^\.]*$)/', $name, $extension);
+
+        if (is_array($extension) && sizeof($extension) > 0) {
+            return strtolower($extension[1]);
+        }
+
+        return '';
+    }
+
     /**
      * @param $fileSize string
      * @return string
