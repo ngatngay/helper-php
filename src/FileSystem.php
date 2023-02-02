@@ -24,12 +24,12 @@ class FileSystem
             $s = round($size / 1099511627776, 2) . ' TB';
         } elseif ($size < 1152921504606846976) {
             $s = round($size / 1125899906842624, 2) . ' PB';
-        } elseif ($size < 1180591620717411303424) {
+        } elseif ($size < 1.1805916207174E+21) {
             $s = round($size / 1152921504606846976, 2) . ' EB';
-        } elseif ($size < 1208925819614629174706176) {
-            $s = round($size / 1180591620717411303424, 2) . ' ZB';
+        } elseif ($size < 1.2089258196146E+24) {
+            $s = round($size / 1.1805916207174E+21, 2) . ' ZB';
         } else {
-            $s = round($size / 1208925819614629174706176, 2) . ' YB';
+            $s = round($size / 1.2089258196146E+24, 2) . ' YB';
         }
 
         return $s;
