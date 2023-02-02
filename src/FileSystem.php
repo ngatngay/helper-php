@@ -4,7 +4,7 @@ namespace NgatNgay\Helper;
 
 class FileSystem
 {
-    function getExtension(string $name): string
+    public function getExtension(string $name): string
     {
         $name = strval($name);
 
