@@ -1,40 +1,38 @@
 <?php
 
-namespace NgatNgay\Helper;
-
-class Strings
+class Str
 {
     /**
      * @param string $string
      * @return bool
      */
-    public function empty($string)
+    public static function empty($string)
     {
         return strlen($string) === 0;
     }
 
-    public function wordCut(string $string, int $words = 35, string $end = '...'): string
+    public static function wordCut(string $string, int $words = 35, string $end = '...'): string
     {
         preg_match('/^\s*+(?:\S++\s*+){1,' . $words . '}/u', $string, $matches);
 
-        if (!isset($matches[0]) || $this->length($string) === $this->length($matches[0])) {
+        if (!isset($matches[0]) || self::length($string) === self::length($matches[0])) {
             return $string;
         }
 
         return rtrim($matches[0]) . $end;
     }
 
-    public function nl2br(string $str): string
+    public static function nl2br(string $str): string
     {
         return str_replace(PHP_EOL, '<br />', $str);
     }
 
-    public function br2nl(string $str): string
+    public static function br2nl(string $str): string
     {
         return preg_replace('#<br\s*/?>#i', PHP_EOL, $str);
     }
 
-    public function length(string $str): int
+    public static function length(string $str): int
     {
         return mb_strlen($str);
     }
@@ -44,7 +42,7 @@ class Strings
      * @param string $str
      * @return string
      */
-    public function vn2en($str)
+    public static function vn2en($str)
     {
         $unicode = [
             'a' => '/á|à|ả|ã|ạ|ă|ắ|ặ|ằ|ẳ|ẵ|â|ấ|ầ|ẩ|ẫ|ậ/',

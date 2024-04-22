@@ -1,40 +1,38 @@
 <?php
 
-namespace NgatNgay\Helper;
-
 class Date
 {
-    public function now()
+    public static function now()
     {
         return time();
     }
 
-    public function startDay($day)
+    public static function startDay($day)
     {
         return mktime(00, 00, 00, date('n'), $day);
     }
 
-    public function startMonth($month)
+    public static function startMonth($month)
     {
         return mktime(00, 00, 00, $month);
     }
 
-    public function startYear()
+    public static function startYear()
     {
     }
 
 
-    public function currentDay()
+    public static function currentDay()
     {
         return date('d');
     }
 
-    public function currentMonth()
+    public static function currentMonth()
     {
         return date('m');
     }
 
-    public function currentYear()
+    public static function currentYear()
     {
         date('Y');
     }

@@ -1,10 +1,9 @@
 <?php
 
-namespace NgatNgay\Helper;
-
-class FileSystem
+// file system
+class FS
 {
-    public function getExtension(string $name): string
+    public static function getExtension(string $name): string
     {
         $name = strval($name);
 
@@ -21,7 +20,7 @@ class FileSystem
      * @param $fileSize string
      * @return string
      */
-    public function readableSize($fileSize)
+    public static function readableSize($fileSize)
     {
         $size = floatval($fileSize);
 
@@ -48,14 +47,14 @@ class FileSystem
         return $s;
     }
 
-    public function remove($path)
+    public static function remove($path)
     {
         if (file_exists($path)) {
             unlink($path);
         }
     }
 
-    public function removeDir($dir, $remove_this = true)
+    public static function removeDir($dir, $remove_this = true)
     {
         if ($objs = glob($dir . "/*")) {
             foreach ($objs as $obj) {

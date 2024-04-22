@@ -1,10 +1,8 @@
 <?php
 
-namespace NgatNgay\Helper;
-
-class Arrays
+class Arr
 {
-    public function multipleUploadToSimple(array $fileUpload): array
+    public static function multipleUploadToSimple(array $fileUpload): array
     {
         $files = [];
 
@@ -21,7 +19,7 @@ class Arrays
         return $files;
     }
 
-    public function getFromPage(array $data, int $page, int $perPage = 10): array
+    public static function getFromPage(array $data, int $page, int $perPage = 10): array
     {
         $result = [];
         $total = count($data);
