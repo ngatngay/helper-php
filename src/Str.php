@@ -1,5 +1,7 @@
 <?php
 
+namespace NgatNgay\Helper;
+
 class Str
 {
     /**

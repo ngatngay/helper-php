@@ -1,5 +1,7 @@
 <?php
 
+namespace NgatNgay\Helper;
+
 // file system
 class FS
 {

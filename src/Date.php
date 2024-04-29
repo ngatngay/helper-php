@@ -1,5 +1,7 @@
 <?php
 
+namespace NgatNgay\Helper;
+
 class Date
 {
     public static function now()

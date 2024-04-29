@@ -1,5 +1,9 @@
 <?php
 
+use NgatNgay\Helper\Arr;
+use NgatNgay\Helper\Str;
+use NgatNgay\Helper\FS;
+
 test('array test', function () {
     $arr = [];
     for ($i = 0; $i < 95; $i++) {

@@ -1,5 +1,7 @@
 <?php
 
+namespace NgatNgay\Helper;
+
 class Arr
 {
     public static function multipleUploadToSimple(array $fileUpload): array
