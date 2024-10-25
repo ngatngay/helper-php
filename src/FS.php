@@ -5,6 +5,27 @@ namespace NgatNgay\Helper;
 // file system
 class FS
 {
+    /*
+     * file, file1, file2...
+     */
+    function nameIncrement(string $file_name_body, string $file_ext): string
+    {
+        $i = 1;
+        $file_exists = true;
+
+        do {
+            $file_save = $file_name_body . $i . '.' . $file_ext;
+
+            if (!file_exists($file_save)) {
+                $file_exists = false;
+            }
+
+            $i++;
+        } while ($file_exists);
+
+        return $file_save;
+    }
+
     public static function getExtension(string $name): string
     {
         $name = strval($name);
