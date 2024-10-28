@@ -38,4 +38,28 @@ class Date
     {
         date('Y');
     }
+
+    public static function displayAgo($time)
+    {
+        $time  = intval($time);
+        $times = time() - $time;
+
+        if ($times < 1) {
+            $t = 'Vừa xong';
+        } elseif ($times < 60) {
+            $t = $times . ' giây trước';
+        } elseif ($times < 3600) {
+            $t = round($times / 60) . ' phút trước';
+        } elseif ($times < 86400) {
+            $t = round($times / 3600) . ' giờ trước';
+        } elseif ($times < 2_592_000) {
+            $t = round($times / 86400) . ' ngày trước';
+        } elseif ($times < 31_536_000) {
+            $t = round($times / 2_592_000) . ' tháng trước';
+        } else {
+            $t = round($times / 31_536_000) . ' năm trước';
+        }
+
+        return $t;
+    }
 }
