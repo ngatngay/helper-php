@@ -42,4 +42,11 @@ class Arr
 
         return $result;
     }
+
+    public static function toFile($file, $arr) {
+        return file_put_contents(
+            $file,
+            '<?php return ' . var_export($arr, true)
+        );
+    }
 }
