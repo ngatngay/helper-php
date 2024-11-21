@@ -56,7 +56,7 @@ function response($data = null, $status = 200, $headers = []): IResponse
                 header($header);
             }
                  
-            echo $this->data;
+            exit($this->data);
         }
     };
 }
