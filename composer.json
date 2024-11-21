@@ -16,9 +16,9 @@
         "psr-4": {
             "NgatNgay\\Helper\\": "src/"
         },
-        "files": {
+        "files": [
             "src/function.php"
-        }
+        ]
     },
     "require-dev": {
         "pestphp/pest": "^2.34"
