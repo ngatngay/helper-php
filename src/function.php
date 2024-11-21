@@ -1,5 +1,7 @@
 <?php
 
+namespace NgatNgay\Helper;
+
 interface IResponse
 {
     public function data($data);
