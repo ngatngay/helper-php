@@ -46,7 +46,7 @@ class Arr
     public static function toFile($file, $arr) {
         return file_put_contents(
             $file,
-            '<?php return ' . var_export($arr, true) . ';';
+            '<?php return ' . var_export($arr, true) . ';'
         );
     }
 }
