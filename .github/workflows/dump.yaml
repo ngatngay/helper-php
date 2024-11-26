@@ -1,0 +1,22 @@
+name: dump
+
+on:
+  push:
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Delete old file
+        run: rm -f helper.php
+
+      - name: dump
+        run: php dump.php
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
