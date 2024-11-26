@@ -2,6 +2,8 @@
 
 namespace NgatNgay\Helper;
 
+// array helper pro max
+
 class Arr
 {
     public static function multipleUploadToSimple(array $fileUpload): array
