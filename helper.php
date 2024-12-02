@@ -45,9 +45,9 @@ class Arr
         return $result;
     }
 
-    public static function toFile($file, $arr) {
+    public static function toFile(string $filename, array $arr) {
         return file_put_contents(
-            $file,
+            $filename,
             '<?php return ' . var_export($arr, true) . ';'
         );
     }
