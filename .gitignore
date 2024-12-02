@@ -1,5 +1,6 @@
 .idea/
 vendor/
+docs-cache/
 
 *.cache
 composer.lock
