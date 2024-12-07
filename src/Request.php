@@ -33,4 +33,21 @@ class Request
 
         return $headers;
     }
+    
+    public function getIp() {
+        $ip = '127.0.0.1';
+
+        return $ip;
+    }
+    
+    public function getUserAgent() {
+        return $this->header['user-agent'] ?? '';
+    }
+    
+    public function getBaseUrl()
+    {
+        return ($this->server['request_scheme'] ?? 'http')
+            . '://'
+            . ($this->server['server_name'] ?? 'localhost');
+    }
 }
