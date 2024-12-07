@@ -34,6 +34,13 @@ class Request
         return $headers;
     }
     
+    public function isCLI() {
+        return php_sapi_name() === 'cli';
+    }
+    public function isCLIServer() {
+        return php_sapi_name() === 'cli-server';
+    }
+    
     public function getIp() {
         $ip = '127.0.0.1';
 
