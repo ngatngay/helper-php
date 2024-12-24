@@ -71,6 +71,11 @@
 			<h3>Functions</h3>
 			<ul>
 					<li>
+						<a href="function-NgatNgay.Helper.request.html">
+							request
+						</a>
+					</li>
+					<li>
 						<a href="function-NgatNgay.Helper.response.html">
 							response
 						</a>
@@ -143,7 +148,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Request.html#13-21" title="Go to source code">__construct</a>()</code>
+				<code><a href="source-Request.html#14-23" title="Go to source code">__construct</a>()</code>
 
 
 
@@ -169,7 +174,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Request.html#37-39" title="Go to source code">isCLI</a>()</code>
+				<code><a href="source-Request.html#39-41" title="Go to source code">isCLI</a>()</code>
 
 
 
@@ -195,7 +200,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Request.html#40-42" title="Go to source code">isCLIServer</a>()</code>
+				<code><a href="source-Request.html#42-44" title="Go to source code">isCLIServer</a>()</code>
 
 
 
@@ -210,6 +215,58 @@
 			<a href="#_isCLIServer">#</a>
 		</td>
 	</tr>
+	<tr class="expandable collapsed" data-order="getMethod" id="_getMethod">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#46-48" title="Go to source code">getMethod</a>()</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getMethod">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isMethod" id="_isMethod">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#50-52" title="Go to source code">isMethod</a>(<span><var>$value</var></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isMethod">#</a>
+		</td>
+	</tr>
 	<tr class="expandable collapsed" data-order="getIp" id="_getIp">
 			<td class="table-cell table-shrink">
 				<code class="nowrap">
@@ -221,7 +278,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Request.html#44-48" title="Go to source code">getIp</a>()</code>
+				<code><a href="source-Request.html#54-58" title="Go to source code">getIp</a>()</code>
 
 
 
@@ -247,7 +304,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Request.html#50-52" title="Go to source code">getUserAgent</a>()</code>
+				<code><a href="source-Request.html#60-62" title="Go to source code">getUserAgent</a>()</code>
 
 
 
@@ -273,7 +330,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Request.html#54-59" title="Go to source code">getBaseUrl</a>()</code>
+				<code><a href="source-Request.html#64-69" title="Go to source code">getBaseUrl</a>()</code>
 
 
 
@@ -286,6 +343,188 @@
 			</td>
 		<td class="table-anchor">
 			<a href="#_getBaseUrl">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getUrl" id="_getUrl">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#71-74" title="Go to source code">getUrl</a>(<span><var>$mode</var> = <span class="php-str">'full'</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getUrl">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="get" id="_get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#76-79" title="Go to source code">get</a>(<span><var>$key</var></span>, <span><var>$default</var> = <span class="php-kw">null</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_get">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="post" id="_post">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#81-84" title="Go to source code">post</a>(<span><var>$key</var></span>, <span><var>$default</var> = <span class="php-kw">null</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_post">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="header" id="_header">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#86-89" title="Go to source code">header</a>(<span><var>$key</var></span>, <span><var>$default</var> = <span class="php-kw">null</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_header">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="cookie" id="_cookie">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#91-94" title="Go to source code">cookie</a>(<span><var>$key</var></span>, <span><var>$default</var> = <span class="php-kw">null</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_cookie">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="server" id="_server">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#96-99" title="Go to source code">server</a>(<span><var>$key</var></span>, <span><var>$default</var> = <span class="php-kw">null</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_server">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="request" id="_request">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Request.html#101-104" title="Go to source code">request</a>(<span><var>$key</var></span>, <span><var>$default</var> = <span class="php-kw">null</span></span>)</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_request">#</a>
 		</td>
 	</tr>
 		</table>
@@ -418,6 +657,30 @@
 			</td>
 		<td class="table-anchor">
 			<a href="#$server">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="request" id="$request">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell table-shrink">
+				<code class="nowrap">array</code>
+			</td>
+
+			<td class="table-cell">
+<code><var><a href="source-Request.html#12" title="Go to source code">$request</a></var></code>
+				
+
+	<div class="expandable-expandedView">
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#$request">#</a>
 		</td>
 	</tr>
 		</table>
