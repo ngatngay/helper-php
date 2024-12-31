@@ -45,7 +45,7 @@ function response($data = null, $status = 200, $headers = []): IResponse
             $this->headers += ['Content-Type: application/json'];
 
             if (is_array($this->data)) {
-                $this->data = json_encode($this->data);
+                $this->data = json_encode($this->data, JSON_PRETTY_PRINT);
             }
             return $this;
         }
@@ -58,8 +58,6 @@ function response($data = null, $status = 200, $headers = []): IResponse
 
         public function send()
         {
-            @ob_end_clean();
-
             if (is_array($this->data)) {
                 $this->json();
             }
