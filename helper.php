@@ -368,13 +368,19 @@ class Request
     {
         return php_sapi_name() === 'cli-server';
     }
+    
+    public function getScriptName(): string
+    {
+        return $this->server('script_name');
+    }
+    
 
     public function getMethod()
     {
         return strtolower($this->server['request_method']);
     }
 
-    public function isMethod($value)
+    public function isMethod(string $value)
     {
         return strtolower($value) === $this->getMethod();
     }
