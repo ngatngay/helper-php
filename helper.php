@@ -157,9 +157,9 @@ class Curl extends \Curl\Curl {
     {
         parent::__construct($base_url, $options);
         
-        //$this->setJsonDecoder(function ($res) {
-     //       return json_decode($res, true);
-    //    });
+        $this->setJsonDecoder(function ($res) {
+            return json_decode($res, true);
+        });
     }
 }
 
@@ -345,7 +345,7 @@ class Request
         $this->cookie = $_COOKIE;
         $this->request = $_REQUEST;
     }
-        
+
     private function initHeader()
     {
         $headers = [];
@@ -359,72 +359,105 @@ class Request
 
         return $headers;
     }
-    
-    public function isCLI() {
+
+    public function isCLI()
+    {
         return php_sapi_name() === 'cli';
     }
-    public function isCLIServer() {
+    public function isCLIServer()
+    {
         return php_sapi_name() === 'cli-server';
     }
-    
-    public function getMethod() {
+
+    public function getMethod()
+    {
         return strtolower($this->server['request_method']);
     }
-    
-    public function isMethod($value) {
+
+    public function isMethod($value)
+    {
         return strtolower($value) === $this->getMethod();
-     }
-    
-    public function getIp() {
+    }
+
+    public function getIp()
+    {
         $ip = '127.0.0.1';
 
         return $ip;
     }
-    
-    public function getUserAgent() {
+
+    public function getUserAgent()
+    {
         return $this->header['user-agent'] ?? '';
     }
-    
+
     public function getBaseUrl()
     {
         return ($this->server['request_scheme'] ?? 'http')
             . '://'
             . ($this->server['server_name'] ?? 'localhost');
     }
-    
-    public function getUrl($mode = 'full') {
+
+    public function getUrl($mode = 'full')
+    {
         $uri = $mode === 'no_query' ? strtok($this->server['request_uri'], '?') : $this->server['request_uri'];
         return $this->getBaseUrl() . $uri;
     }
 
-    // Hàm get cho thuộc tính get
-    public function get($key, $default = null) {
+    public function get($key, $default = null)
+    {
         return $this->get[$key] ?? $default;
     }
+    
+    public function hasGet($key)
+    {
+        return isset($this->get[$key]);
+    }
 
-    // Hàm get cho thuộc tính post
-    public function post($key, $default = null) {
+    public function post($key, $default = null)
+    {
         return $this->post[$key] ?? $default;
     }
+    
+    public function hasPost($key)
+    {
+        return isset($this->post[$key]);
+    }
 
-    // Hàm get cho thuộc tính header
-    public function header($key, $default = null) {
+    public function header($key, $default = null)
+    {
         return $this->header[$key] ?? $default;
     }
+    public function hasHeader($key)
+    {
+        return isset($this->header[$key]);
+    }
 
-    // Hàm get cho thuộc tính cookie
-    public function cookie($key, $default = null) {
+    public function cookie($key, $default = null)
+    {
         return $this->cookie[$key] ?? $default;
     }
-
-    // Hàm get cho thuộc tính server
-    public function server($key, $default = null) {
-        return $this->server[$key] ?? $default;
+    public function hasCookie($key)
+    {
+        return isset($this->cookie[$key]);
     }
 
-    // Hàm get cho thuộc tính request
-    public function request($key, $default = null) {
+    public function server($key, $default = null)
+    {
+        return $this->server[$key] ?? $default;
+    }
+    public function hasServer($key)
+    {
+        return isset($this->server[$key]);
+    }
+
+    public function request($key, $default = null)
+    {
         return $this->request[$key] ?? $default;
+    }
+    public function hasRequest($key)
+    {
+        return isset($this->request[$key]);
     }
 }
 
