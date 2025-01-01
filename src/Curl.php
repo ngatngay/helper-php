@@ -7,8 +7,8 @@ class Curl extends \Curl\Curl {
     {
         parent::__construct($base_url, $options);
         
-        //$this->setJsonDecoder(function ($res) {
-     //       return json_decode($res, true);
-    //    });
+        $this->setJsonDecoder(function ($res) {
+            return json_decode($res, true);
+        });
     }
 }
