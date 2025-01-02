@@ -338,6 +338,8 @@ class Request
     public function __construct()
     {
         $this->server = array_change_key_case($_SERVER);
+        ksort($this->server);
+
         $this->header = $this->initHeader();
 
         $this->get = $_GET;
@@ -368,12 +370,12 @@ class Request
     {
         return php_sapi_name() === 'cli-server';
     }
-    
+
     public function getScriptName(): string
     {
         return $this->server('script_name');
     }
-    
+
 
     public function getMethod()
     {
@@ -385,17 +387,35 @@ class Request
         return strtolower($value) === $this->getMethod();
     }
 
-    public function getIp()
+    public function getClientIp()
     {
-        $ip = '127.0.0.1';
+        $keys = [
+            'http_client_ip',
+            'http_x_forwarded_for',
+            'http_x_forwarded',
+            'http_forwarded_for',
+            'http_forwarded',
+            'remote_addr'
+        ];        
+        foreach ($keys as $key) {
+            if (isset($this->server[$key])) {
+                return $this->server[$key];
+            }
+        }
 
-        return $ip;
+        return '0.0.0.0';
     }
 
     public function getUserAgent()
     {
         return $this->header['user-agent'] ?? '';
     }
+
+public function getReferer()
+{
+    return $this->header['referer'] ?? '';
+}
+
 
     public function getBaseUrl()
     {
@@ -414,7 +434,7 @@ class Request
     {
         return $this->get[$key] ?? $default;
     }
-    
+
     public function hasGet($key)
     {
         return isset($this->get[$key]);
@@ -424,7 +444,7 @@ class Request
     {
         return $this->post[$key] ?? $default;
     }
-    
+
     public function hasPost($key)
     {
         return isset($this->post[$key]);
@@ -542,13 +562,14 @@ class Str
 
 namespace NgatNgay\Helper;
 
-function request(): Request {
+function request(): Request
+{
     static $instance = null;
 
     if ($instance === null) {
         $instance = new Request();
     }
-    
+
     return $instance;
 }
 
@@ -612,6 +633,21 @@ function response($data = null, $status = 200, $headers = []): IResponse
             exit($this->data);
         }
     };
+}
+
+function redirect(string $url, int $status = 301)
+{
+    ob_end_clean();
+    http_response_code($status);
+    header('Location: ' . $url);
+    exit;
+}
+
+function refresh()
+{
+    ob_end_clean();
+    header('Refresh:0');
+    exit;
 }
 
 ?>
