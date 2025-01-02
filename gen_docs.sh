@@ -1,0 +1,1 @@
+apigen src --output docs

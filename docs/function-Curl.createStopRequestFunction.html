@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-
-	<title>NgatNgay\Helper\request |  API</title>
+	<meta name="robots" content="noindex">
+	<title>Curl\createStopRequestFunction |  API</title>
 	<link rel="stylesheet" href="assets/main.css">
 	<script src="assets/main.js" defer></script>
 </head>
@@ -17,9 +17,12 @@
 				<h3>Namespaces</h3>
 	<ul>
 			<li class="menuGroup-item active">
+				<a href="namespace-Curl.html">Curl</a>
+			</li>
+			<li class="menuGroup-item">
 				<a href="namespace-NgatNgay.html">NgatNgay</a>
 	<ul>
-			<li class="menuGroup-item active">
+			<li class="menuGroup-item">
 				<a href="namespace-NgatNgay.Helper.html">Helper</a>
 			</li>
 	</ul>
@@ -31,48 +34,13 @@
 			<h3>Classes</h3>
 			<ul>
 					<li>
-						<a href="NgatNgay.Helper.Arr.html">
-							Arr
+						<a href="Curl.BaseCurl.html">
+							BaseCurl
 						</a>
 					</li>
 					<li>
-						<a href="NgatNgay.Helper.Cache.html">
-							Cache
-						</a>
-					</li>
-					<li>
-						<a href="NgatNgay.Helper.Curl.html">
+						<a href="Curl.Curl.html">
 							Curl
-						</a>
-					</li>
-					<li>
-						<a href="NgatNgay.Helper.Date.html">
-							Date
-						</a>
-					</li>
-					<li>
-						<a href="NgatNgay.Helper.FS.html">
-							FS
-						</a>
-					</li>
-					<li>
-						<a href="NgatNgay.Helper.Request.html">
-							Request
-						</a>
-					</li>
-					<li>
-						<a href="NgatNgay.Helper.Str.html">
-							Str
-						</a>
-					</li>
-			</ul>
-		</div>
-		<div class="menu-section">
-			<h3>Interfaces</h3>
-			<ul>
-					<li>
-						<a href="NgatNgay.Helper.IResponse.html">
-							IResponse
 						</a>
 					</li>
 			</ul>
@@ -80,24 +48,14 @@
 		<div class="menu-section">
 			<h3>Functions</h3>
 			<ul>
+					<li>
+						<a href="function-Curl.createHeaderCallback.html">
+							createHeaderCallback
+						</a>
+					</li>
 					<li class="active">
-						<a href="function-NgatNgay.Helper.request.html">
-							request
-						</a>
-					</li>
-					<li>
-						<a href="function-NgatNgay.Helper.response.html">
-							response
-						</a>
-					</li>
-					<li>
-						<a href="function-NgatNgay.Helper.redirect.html">
-							redirect
-						</a>
-					</li>
-					<li>
-						<a href="function-NgatNgay.Helper.refresh.html">
-							refresh
+						<a href="function-Curl.createStopRequestFunction.html">
+							createStopRequestFunction
 						</a>
 					</li>
 			</ul>
@@ -115,10 +73,10 @@
 				</li>
 				<li>
 					
-						<a href="namespace-NgatNgay.Helper.html">Namespace</a>
+						<a href="namespace-Curl.html">Namespace</a>
 					
 				</li>
-<li class="active"><a href="function-NgatNgay.Helper.request.html">Function</a></li>				<li>
+<li class="active"><a href="function-Curl.createStopRequestFunction.html">Function</a></li>				<li>
 					<a href="tree.html">Tree</a>
 				</li>
 			</ul>
@@ -134,14 +92,35 @@
 
 		<div class="layout-content">
 		<h1>
-<a href="namespace-NgatNgay.html">NgatNgay</a>\<a href="namespace-NgatNgay.Helper.html">Helper</a>\<a href="function-NgatNgay.Helper.request.html">request</a>		</h1>
+<a href="namespace-Curl.html">Curl</a>\<a href="function-Curl.createStopRequestFunction.html">createStopRequestFunction</a>		</h1>
 
 
-
-		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-function.html#5-14" title="Go to source code">function.php</a>
+		<div class="classLikeDescription">
+	<div class="description"><p>Create Stop Request Function</p>
+<p>Create a function for Curl::progress() that stops a request early when the
+stopRequest flag is on. Keep this function separate from the class to prevent
+a memory leak.</p>
+</div>
 		</div>
 
+
+		<table class="table">
+			<tr>
+				<th class="table-heading" colspan="4">Parameters</th>
+			</tr>
+
+				<tr id="$header_callback_data">
+					<td class="table-cell table-shrink">
+						<code class="nowrap"></code>
+					</td>
+					<td class="table-cell table-shrink">
+<code class="nowrap"><var>$header_callback_data</var></code>					</td>
+					<td class="table-cell"></td>
+					<td class="table-anchor">
+						<a href="#$header_callback_data">#</a>
+					</td>
+				</tr>
+		</table>
 
 		<table class="table">
 			<tr>
@@ -150,7 +129,7 @@
 
 			<tr>
 				<td class="table-cell table-shrink">
-					<code class="nowrap"><a href="NgatNgay.Helper.Request.html"><span title="NgatNgay\Helper\Request">Request</span></a></code>
+					<code class="nowrap">callable</code>
 				</td>
 			</tr>
 		</table>

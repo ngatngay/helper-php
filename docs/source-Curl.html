@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>NgatNgay\Helper\response |  API</title>
+	<title>File Curl.php |  API</title>
 	<link rel="stylesheet" href="assets/main.css">
 	<script src="assets/main.js" defer></script>
 </head>
@@ -40,7 +40,7 @@
 							Cache
 						</a>
 					</li>
-					<li>
+					<li class="active">
 						<a href="NgatNgay.Helper.Curl.html">
 							Curl
 						</a>
@@ -85,7 +85,7 @@
 							request
 						</a>
 					</li>
-					<li class="active">
+					<li>
 						<a href="function-NgatNgay.Helper.response.html">
 							response
 						</a>
@@ -118,7 +118,7 @@
 						<a href="namespace-NgatNgay.Helper.html">Namespace</a>
 					
 				</li>
-<li class="active"><a href="function-NgatNgay.Helper.response.html">Function</a></li>				<li>
+<li class="active"><a href="NgatNgay.Helper.Curl.html">Class</a></li>				<li>
 					<a href="tree.html">Tree</a>
 				</li>
 			</ul>
@@ -133,67 +133,7 @@
 		</div>
 
 		<div class="layout-content">
-		<h1>
-<a href="namespace-NgatNgay.html">NgatNgay</a>\<a href="namespace-NgatNgay.Helper.html">Helper</a>\<a href="function-NgatNgay.Helper.response.html">response</a>		</h1>
-
-
-
-		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-function.html#24-76" title="Go to source code">function.php</a>
-		</div>
-
-		<table class="table">
-			<tr>
-				<th class="table-heading" colspan="4">Parameters</th>
-			</tr>
-
-				<tr id="$data">
-					<td class="table-cell table-shrink">
-						<code class="nowrap"></code>
-					</td>
-					<td class="table-cell table-shrink">
-<code class="nowrap"><var>$data</var> = <span class="php-kw">null</span></code>					</td>
-					<td class="table-cell"></td>
-					<td class="table-anchor">
-						<a href="#$data">#</a>
-					</td>
-				</tr>
-				<tr id="$status">
-					<td class="table-cell table-shrink">
-						<code class="nowrap"></code>
-					</td>
-					<td class="table-cell table-shrink">
-<code class="nowrap"><var>$status</var> = <span class="php-num">200</span></code>					</td>
-					<td class="table-cell"></td>
-					<td class="table-anchor">
-						<a href="#$status">#</a>
-					</td>
-				</tr>
-				<tr id="$headers">
-					<td class="table-cell table-shrink">
-						<code class="nowrap"></code>
-					</td>
-					<td class="table-cell table-shrink">
-<code class="nowrap"><var>$headers</var> = []</code>					</td>
-					<td class="table-cell"></td>
-					<td class="table-anchor">
-						<a href="#$headers">#</a>
-					</td>
-				</tr>
-		</table>
-
-		<table class="table">
-			<tr>
-				<th class="table-heading" colspan="2">Returns</th>
-			</tr>
-
-			<tr>
-				<td class="table-cell table-shrink">
-					<code class="nowrap"><a href="NgatNgay.Helper.IResponse.html"><span title="NgatNgay\Helper\IResponse">IResponse</span></a></code>
-				</td>
-			</tr>
-		</table>
-
+	<table class="source"><tr id="1" class="source-line"><td><a class="source-lineNum" href="#1"> 1: </a></td><td><span class="php-tag">&lt;?php</span></td></tr><tr id="2" class="source-line"><td><a class="source-lineNum" href="#2"> 2: </a></td><td><span class="php-tag"></span></td></tr><tr id="3" class="source-line"><td><a class="source-lineNum" href="#3"> 3: </a></td><td><span class="php-kw">namespace</span> NgatNgay\Helper;</td></tr><tr id="4" class="source-line"><td><a class="source-lineNum" href="#4"> 4: </a></td><td></td></tr><tr id="5" class="source-line"><td><a class="source-lineNum" href="#5"> 5: </a></td><td><span class="php-kw">class</span> Curl <span class="php-kw">extends</span> \Curl\Curl {</td></tr><tr id="6" class="source-line"><td><a class="source-lineNum" href="#6"> 6: </a></td><td>    <span class="php-kw">public</span> <span class="php-kw">function</span> __construct(<span class="php-var">$base_url</span> = <span class="php-kw">null</span>, <span class="php-var">$options</span> = [])</td></tr><tr id="7" class="source-line"><td><a class="source-lineNum" href="#7"> 7: </a></td><td>    {</td></tr><tr id="8" class="source-line"><td><a class="source-lineNum" href="#8"> 8: </a></td><td>        parent::__construct(<span class="php-var">$base_url</span>, <span class="php-var">$options</span>);</td></tr><tr id="9" class="source-line"><td><a class="source-lineNum" href="#9"> 9: </a></td><td>        </td></tr><tr id="10" class="source-line"><td><a class="source-lineNum" href="#10">10: </a></td><td>        <span class="php-var">$this</span>-&gt;setJsonDecoder(<span class="php-kw">function</span> (<span class="php-var">$res</span>) {</td></tr><tr id="11" class="source-line"><td><a class="source-lineNum" href="#11">11: </a></td><td>            <span class="php-kw">return</span> json_decode(<span class="php-var">$res</span>, <span class="php-kw">true</span>);</td></tr><tr id="12" class="source-line"><td><a class="source-lineNum" href="#12">12: </a></td><td>        });</td></tr><tr id="13" class="source-line"><td><a class="source-lineNum" href="#13">13: </a></td><td>    }</td></tr><tr id="14" class="source-line"><td><a class="source-lineNum" href="#14">14: </a></td><td>}</td></tr><tr id="15" class="source-line"><td><a class="source-lineNum" href="#15">15: </a></td><td></td></tr></table>
 		</div>
 
 		<div class="layout-footer">
